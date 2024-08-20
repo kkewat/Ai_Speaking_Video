@@ -21,11 +21,10 @@ def animate_video(transcript):
     response = requests.request("POST", url, json=payload, headers=headers)
     return response.json()
 
-def check_video_status(job_id):   
-
+def check_video_status(job_id):
     url = f"https://api.synclabs.so/animate/{job_id}"
     headers = {"x-api-key": "2942acfd-2eb6-4bfb-9d89-213ae1328cc0"}
-
+    
     while True:
         response = requests.request("GET", url, headers=headers)
         data = response.json()
