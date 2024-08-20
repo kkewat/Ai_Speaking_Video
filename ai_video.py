@@ -31,9 +31,9 @@ def check_video_status(job_id):
 
         if data["status"] == "COMPLETED":
             return data
-        else:
+        """else:
             time.sleep(10)  # Adjust polling interval as needed
-            st.info("Video creation is in progress...")
+            st.info("Video creation is in progress...")"""
 
 def main():
     st.title("Ai Speaking Video Animation")
